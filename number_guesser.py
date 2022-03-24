@@ -5,8 +5,6 @@
 # This program prompts a user to guess a number
 # and tells them if they are correct or not.
 
-import constants
-
 
 def main():
     # this function gets a guess then checks if it is right
