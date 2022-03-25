@@ -3,7 +3,9 @@
 # Created by Aidan Lalonde-Novales
 # Created March 2022
 # This program prompts a user to guess a number
-# and tells them if they are correct or not.
+# and tells them if they are correct or not (random number).
+
+import random
 
 
 def main():
@@ -13,10 +15,13 @@ def main():
     guessed_number = int(input("Enter a number between 0 and 9: "))
 
     # process & output
-    if guessed_number == constants.RANDOM_NUMBER:
+    random_number = random.randint(0, 9)  # a number between 0 and 9
+    if guessed_number == random_number:
         print("You Guessed Correctly!")
-    if guessed_number != constants.RANDOM_NUMBER:
-        print("You Guessed Incorrectly.")
+    else:
+        print(
+            "You Guessed Incorrectly. The correct number was {}.".format(random_number)
+        )
     print("\nDone.")
 
 
